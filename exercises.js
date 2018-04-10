@@ -218,8 +218,31 @@ If/else statements = Evaluates (or checks) a condition. If the condition is true
 /*Final Boss*/
 /*Create a function name dailySpecials which takes in a parameter: `special`.
 Inside the function, create a switch statement that will check the daily specials of your favorite restaurant (or make up your own daily specials for each day of the week.*/
+var day;
 
-
+function dailySpecials(special) {
+    switch(special) {
+        case 'Meatloaf':
+            day = 'Monday';
+            break;
+        case 'Tacos':
+            day = 'Tuesday';
+            break;
+        case 'Spaghetti':
+            day = 'Wednesday';
+            break;
+        case 'Lasagna':
+            day = 'Thursday';
+            break;
+        case 'Beef Stew':
+            day = 'Friday';
+            break;
+        default:
+            day = 'NO SPECIAL';
+    }
+    return day;
+}
+console.log(dailySpecials('Tacos'));
 
 /*
 For loops - A for loop checks a condition a specific number of times and allows us to execute a code block and evaluate a condition to determine if our loop should run again.
@@ -248,6 +271,11 @@ for (var i = 0; i<toyotaModels.length; i++){
  * "Player: 5"
 */
 
+var players = [1, 2, 3, 4, 5];
+
+for (var i = 0; i < players.length; i++) {
+    console.log("Ready Player: " + players[i]);
+}
 
 /* 
  * #16
@@ -255,6 +283,9 @@ for (var i = 0; i<toyotaModels.length; i++){
 */
   var myFavFoods = ["lemon bar", "carrot cake", "nachos", "bacon cheeseburger", "ramen", "sweet potato fries", "chimichanga"];
 
+  for (var i = 0; i < myFavFoods.length; i++) {
+      console.log(myFavFoods[i]);
+  }
 
 /*
  * #17
@@ -315,9 +346,20 @@ Final Boss
 
 var phrase = "An apple a day keeps Alice feeling awesome!";
  
-  
-  
+function removeLetter(str) {
+    var newPhrase = [];
+    for (var i = 0; i < phrase.length; i++) {
+        if (str[i] === 'A' || str[i] === 'a') {
+            //do nothing
+        }
+        else {
+            newPhrase += str[i];
+        }
+    }
+    return newPhrase;
+}
 
+console.log(removeLetter(phrase));
 
 
 
